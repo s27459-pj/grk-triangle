@@ -7,7 +7,7 @@
 
 
 const int kMajorGLVersion = 4;
-const int kMinorGLVersion = 3;
+const int kMinorGLVersion = 1;
 
 static Window window("Postawy OpenGL", 800, 600);
 
@@ -33,4 +33,3 @@ int main(void){
     glfwTerminate();
     exit(EXIT_SUCCESS);
 }
-

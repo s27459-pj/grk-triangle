@@ -8,7 +8,7 @@
 void Program::Initialize(){
     const GLchar* kVertexShaderText =
     {
-        "#version 430 core\n"\
+        "#version 410 core\n"\
 
         "layout(location=0) in vec4 in_position;\n"\
         "layout(location=1) in vec4 in_color;\n"\
@@ -23,7 +23,7 @@ void Program::Initialize(){
 
     const GLchar* kFragmentShaderText =
     {
-        "#version 430 core\n"\
+        "#version 410 core\n"\
 
         "layout(location = 0) out vec4 color;\n"\
         "in vec4 frag_color;\n"\
