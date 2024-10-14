@@ -1,0 +1,10 @@
+CompileFlags:
+    Add:
+      - -c
+      - -Wall
+      - -DDEBUG
+      - -g3
+      - -fpermissive
+      - -std=c++11
+      - -MMD
+      - -DGL_SILENCE_DEPRECATION
