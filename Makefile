@@ -12,6 +12,10 @@ ifeq ($(OS),Windows_NT)
 LIBS =-lglfw3 -lglew32 -lopengl32 -lm -lglu32 -lgdi32
 EXECUTABLE = $(NAME).exe
 LDFLAGS=-Wl,--subsystem,windows
+else ifeq ($(shell uname),Darwin)
+LIBS = $(shell pkg-config --cflags glfw3 glew)
+EXECUTABLE = $(NAME)
+LDFLAGS = $(shell pkg-config --libs --static glfw3 glew) -framework OpenGL -lm
 else
 LIBS = -lX11 -lglfw -lGL -lGLU -lGLEW -lm
 EXECUTABLE = $(NAME)
