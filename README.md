@@ -14,9 +14,9 @@ xcode-select --install
 ```
 If Xcode and its toolchain were correctly installed, several frameworks for working with OpenGL should now be available.
 
-Install glfw3, glew and make:
+Install glfw, glew and make:
 ```sh
-brew install glfw3 glew make
+brew install glfw glew make
 ```
 
 Additional dependencies - not needed for this example, but will be required for other courses:
