@@ -13,6 +13,7 @@ LIBS =-lglfw3 -lglew32 -lopengl32 -lm -lglu32 -lgdi32
 EXECUTABLE = $(NAME).exe
 LDFLAGS=-Wl,--subsystem,windows
 else ifeq ($(shell uname),Darwin)
+CFLAGS += -DGL_SILENCE_DEPRECATION
 LIBS = $(shell pkg-config --cflags glfw3 glew)
 EXECUTABLE = $(NAME)
 LDFLAGS = $(shell pkg-config --libs --static glfw3 glew) -framework OpenGL -lm
@@ -32,7 +33,7 @@ clean:
 	$(CXX) $(CFLAGS) $< -o $@ $(LIBS)
 
 # linking
-$(EXECUTABLE): $(OBJECTS) 
+$(EXECUTABLE): $(OBJECTS)
 	$(CXX) $(OBJECTS) -o $@ $(LDFLAGS) $(LIBS)
 
 run: $(EXECUTABLE)
