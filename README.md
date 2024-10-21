@@ -14,12 +14,12 @@ xcode-select --install
 ```
 If Xcode and its toolchain were correctly installed, several frameworks for working with OpenGL should now be available.
 
-Install glfw, glew and make:
+With [homebrew](https://brew.sh/), install glfw, glew, make and pkg-config:
 ```sh
-brew install glfw glew make
+brew install glfw glew make pkg-config
 ```
 
-Additional dependencies - not needed for this example, but will be required for other courses:
+Additional dependencies - not needed for this example, but may be required for other examples/assignments:
 ```sh
 brew install jpeg libpng argtable
 ```
