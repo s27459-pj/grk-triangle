@@ -14,6 +14,8 @@ xcode-select --install
 ```
 If Xcode and its toolchain were correctly installed, several frameworks for working with OpenGL should now be available.
 
+If there are compilation errors about missing standard libraries (e.g. `cstddef.h`), try reinstalling Xcode and its toolchain.
+
 With [homebrew](https://brew.sh/), install glfw, glew, make and pkg-config:
 ```sh
 brew install glfw glew make pkg-config
